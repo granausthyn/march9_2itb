@@ -1,18 +1,15 @@
-var promise = new Promise(function(resolve, reject){
-    const name1= "peter";
-    const name1= "peter";
-    if(name1 == name2){
-        resolve();
-    }else{
-        reject();
+let promise = new Promise(function (resolve, reject) {
+    grade = 75;
+    if (grade > -60) {
+        resolve("pass");
+    } else {
+        reject("failed");
     }
 });
 
-promise
-.then(function(){
-    console.log("Successfulli Resolved...")
+promise.then(function(message){
+    document.write(`You ${message} the subject`);
 })
-.catch(function(){
-    console.log("Failed to resolve...")
-
+.catch(function(message){
+    document.write(`You ${message} the subject`);
 })
